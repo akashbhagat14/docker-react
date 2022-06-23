@@ -16,6 +16,7 @@ RUN npm run build
 ## New block for nginx container
 
 FROM nginx
+EXPOSE 80
 
 ## Copying files from builder block /app/build
 COPY --from=builder /app/build /usr/share/nginx/html
